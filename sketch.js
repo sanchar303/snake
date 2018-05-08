@@ -4,8 +4,8 @@ var scl=20;
 var food;
 
 function setup(){
-	fullScreen();
-	//createCanvas(600,600);
+	//fullScreen();
+	createCanvas(600,600);
 	s=new Snake();
 	frameRate(10);
 	pickLocation();
