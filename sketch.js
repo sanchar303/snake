@@ -23,7 +23,7 @@ function pickLocation(){
 
 function draw(){
 
-	background(51);
+	background(100);
 
 	if(s.eat(food)){
 		pickLocation();
@@ -31,7 +31,7 @@ function draw(){
 
 	s.update();
 	s.show();
-	fill(10,20,30);
+	fill(150,80,80);
 	rect(food.x,food.y,scl,scl);
 }
 
