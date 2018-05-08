@@ -1,5 +1,6 @@
 var s;
 var scl=20;
+var sco=0;
 
 var food;
 
@@ -26,12 +27,14 @@ function draw(){
 	background(100);
 
 	if(s.eat(food)){
+		sco=sco+1;
 		pickLocation();
 	}
 
 	s.update();
 	s.show();
-	fill(150,80,80);
+	stroke(255,0,0);
+	fill(0);
 	rect(food.x,food.y,scl,scl);
 }
 
@@ -86,6 +89,7 @@ function Snake(){
 
 	}
 	this.show=function(){
+		noStroke(0);
 		fill(255);
 		for(var i=0;i<this.tail.length;i++){
 			rect(this.tail[i].x,this.tail[i].y,scl,scl);
@@ -95,5 +99,7 @@ function Snake(){
 		}
 
 		rect(this.x,this.y,scl,scl);
+		textSize(15);
+		text("Score: "+sco,5,20);
 	}
 }
